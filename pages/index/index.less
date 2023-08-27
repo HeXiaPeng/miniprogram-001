@@ -1,0 +1,75 @@
+.index_swiper{
+  swiper{
+    width: 750rpx;
+    height: 375rpx;
+    swiper-item{
+      image{
+        width: 100%;
+      }
+    }
+  }
+}
+
+// tab
+.navBar{
+  display: flex;
+  justify-content: space-around;
+  height: 70rpx;
+  position: relative;
+  background: #fff;
+  .navItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .active{
+    color: var(--themeColor);
+    border-bottom: 6rpx solid var(--themeColor);
+  }
+}
+
+// tab 内容里的列表
+.content_wrapper{
+  .tab_menus{
+    display: flex;
+    width: 670rpx;
+    justify-content: space-between;
+    margin: 10rpx 40rpx;
+    .tab_menu{
+      width: 200rpx;
+      height: 100rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1rpx black solid;
+    }
+  }
+  .tab_content{
+    .tab_list{
+      height: 200rpx;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10rpx 40rpx;
+      padding: 10rpx 40rpx;
+      border: 1rpx black solid;
+      .c_name{
+        flex: 1;
+        color: #a1a1a1;
+      }
+      .c_title{
+        flex: 2;
+        padding: 10rpx 0rpx;
+      }
+      .c_state{
+        flex: 1;
+        display: flex;
+        .font_state{
+          color: #a1a1a1;
+          padding-right: 10rpx;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,63 @@
-/**index.wxss**/
-
-.scrollview {
-  height: 100vh;
+.index_swiper swiper {
+  width: 750rpx;
+  height: 375rpx;
+}
+.index_swiper swiper swiper-item image {
+  width: 100%;
+}
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  height: 70rpx;
+  position: relative;
+  background: #fff;
+}
+.navBar .navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBar .active {
+  color: var(--themeColor);
+  border-bottom: 6rpx solid var(--themeColor);
+}
+.content_wrapper .tab_menus {
+  display: flex;
+  width: 670rpx;
+  justify-content: space-between;
+  margin: 10rpx 40rpx;
+}
+.content_wrapper .tab_menus .tab_menu {
+  width: 200rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx black solid;
+}
+.content_wrapper .tab_content .tab_list {
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10rpx 40rpx;
+  padding: 10rpx 40rpx;
+  border: 1rpx black solid;
+}
+.content_wrapper .tab_content .tab_list .c_name {
+  flex: 1;
+  color: #a1a1a1;
+}
+.content_wrapper .tab_content .tab_list .c_title {
+  flex: 2;
+  padding: 10rpx 0rpx;
+}
+.content_wrapper .tab_content .tab_list .c_state {
+  flex: 1;
+  display: flex;
+}
+.content_wrapper .tab_content .tab_list .c_state .font_state {
+  color: #a1a1a1;
+  padding-right: 10rpx;
 }

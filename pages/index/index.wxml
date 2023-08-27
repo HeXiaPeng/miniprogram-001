@@ -1,6 +1,85 @@
-<!--index.wxml-->
-<scroll-view class="scrollview" scroll-y type="list">
-  <view class="container">
-    Weixin
+
+<view>
+  <!-- 搜索框 -->
+  <SearchBar></SearchBar>
+
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper autoplay circular	indicator-dots>
+      <swiper-item 
+        wx:for="{{swiperList}}"
+        wx:for-item="swiper"
+        wx:key="id"
+      >
+          <image mode="widthFix" src="{{'/img/' + swiper.swiperPic}}"></image>
+      </swiper-item>
+    </swiper>
   </view>
-</scroll-view>
+
+  <!-- 选项卡：需求、案例 -->
+  <view class="page">
+  <!-- 导航条.tab太多的时候需要使用scrollview -->
+  <view class="navBar">
+    <block wx:for="{{tabs}}" wx:key="item">
+      <view id="{{index}}" class="navItem {{tabIndex == index ? 'active' : '' }}" bindtap="onTabClick">
+        <view class="navItemTitle">{{item}}</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 内容区域 -->
+  <view class="content_wrapper">
+    <!-- 第一个tab -->
+    <block wx:if="{{tabIndex == 0}}">
+      <view class="tab_menus">
+        <view class="tab_menu">
+          设计服务
+        </view>
+        <view class="tab_menu">
+          软件开发
+        </view>
+        <view class="tab_menu">
+          体验咨询
+        </view>
+      </view>
+      <scroll-view scroll-y class="tab_content">
+        <view class="tab_list"
+          wx:for="{{requirementList}}"
+          wx:for-item="requirement"
+          wx:key="id"
+          >
+          <navigator
+            url="/pages/product_detail/index?id={{requirement.id}}"
+          >
+              <view class="c_name">{{requirement.name}}</view>
+              <view class="c_title"> {{requirement.title}}</view>
+              <view class="c_state"> 
+                <view class="font_state">状态</view> 
+                {{requirement.state}}
+              </view>
+          </navigator>
+          </view>
+      </scroll-view>
+    </block>
+
+    <!-- 第二个tab -->
+    <block wx:if="{{tabIndex == 1}}">
+      <scroll-view scroll-y class="tab_content">
+        <view class="tab_list"
+          wx:for="{{caseList}}"
+          wx:for-item="case"
+          wx:key="id"
+          >
+          <navigator
+            url="/pages/product_detail/index?id={{case.id}}"
+          >
+              <view class="c_name">{{case.name}}</view>
+              <view class="c_title"> {{case.title}}</view>
+          </navigator>
+          </view>
+      </scroll-view>
+    </block>
+  </view>
+
+  </view>
+</view>
