@@ -1,2 +1,41 @@
 <!--pages/publishRequirement/index.wxml-->
-<text>pages/publishRequirement/index.wxml</text>
+<view class="page">
+  <view class="req_title">发布需求</view>
+
+
+    <view class="form">
+      <form bindsubmit="formSubmit">
+      <view class="row">
+        <view class="desc">需求类型</view>
+        <picker class="input" name='requirement_type' bindchange="bindPickerChange" value="{{reqTypeIndex}}" range="{{reqTypeList}}">
+        {{reqTypeList[reqTypeIndex]}}
+        </picker>
+      </view>
+
+      <textarea class="req_text" name='requirement_content' placeholder="点击输入"></textarea>
+
+      <view class="row">
+        <view class="desc">公司</view>
+        <input class="input" name='requirement_company'  placeholder="点击输入"/>
+      </view>
+      <view class="row">
+        <view class="desc">电话</view>
+        <input class="input" name='requirement_phone' placeholder="点击输入"/>
+      </view>
+      <view class="row">
+        <view class="desc">联系人</view>
+        <input class="input" name='requirement_manname' placeholder="点击输入"/>
+      </view>
+      <view class="row">
+        <view class="desc">预算</view>
+        <input class="input" name='requirement_budget'  placeholder="点击输入"/>
+      </view>
+      <button style="margin: 30rpx 0; width: 100%;" type="primary" formType="submit">发布</button>
+      </form>
+    </view>
+
+
+  
+
+
+</view>

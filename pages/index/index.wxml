@@ -17,7 +17,7 @@
   </view>
 
   <!-- 选项卡：需求、案例 -->
-  <view class="page">
+  <view>
   <!-- 导航条.tab太多的时候需要使用scrollview -->
   <view class="navBar">
     <block wx:for="{{tabs}}" wx:key="item">
