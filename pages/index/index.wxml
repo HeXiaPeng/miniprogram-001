@@ -31,17 +31,11 @@
   <view class="content_wrapper">
     <!-- 第一个tab -->
     <block wx:if="{{tabIndex == 0}}">
-      <view class="tab_menus">
-        <view class="tab_menu">
-          设计服务
-        </view>
-        <view class="tab_menu">
-          软件开发
-        </view>
-        <view class="tab_menu">
-          体验咨询
-        </view>
-      </view>
+      <!-- <view class="tab_menus">
+        <view class="tab_menu">设计服务</view>
+        <view class="tab_menu">软件开发</view>
+        <view class="tab_menu">体验咨询</view>
+      </view> -->
       <scroll-view scroll-y class="tab_content">
         <view class="tab_list"
           wx:for="{{requirementList}}"
@@ -64,6 +58,21 @@
 
     <!-- 第二个tab -->
     <block wx:if="{{tabIndex == 1}}">
+      <view class="tab_menus">
+        <view class="tab_menu">品牌营销</view>
+        <view class="tab_menu">界面交互</view>
+        <view class="tab_menu">用户调研</view>
+      </view>
+      <view class="tab_menus">
+        <view class="tab_menu">用户体验</view>
+        <view class="tab_menu">软件开发</view>
+        <view class="tab_menu">产品设计</view>
+      </view>
+      <view class="tab_menus">
+        <view class="tab_menu">产品包装</view>
+        <view class="tab_menu">文创</view>
+        <view class="tab_menu">数字孪生</view>
+      </view>
       <scroll-view scroll-y class="tab_content">
         <view class="tab_list"
           wx:for="{{caseList}}"
