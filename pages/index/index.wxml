@@ -31,11 +31,6 @@
   <view class="content_wrapper">
     <!-- 第一个tab -->
     <block wx:if="{{tabIndex == 0}}">
-      <!-- <view class="tab_menus">
-        <view class="tab_menu">设计服务</view>
-        <view class="tab_menu">软件开发</view>
-        <view class="tab_menu">体验咨询</view>
-      </view> -->
       <scroll-view scroll-y class="tab_content">
         <view class="tab_list"
           wx:for="{{requirementList}}"
@@ -43,13 +38,13 @@
           wx:key="id"
           >
           <navigator
-            url="/pages/product_detail/index?id={{requirement.id}}"
+            url="/pages/reqirementDetails/index?_id={{requirement._id}}"
           >
-              <view class="c_name">{{requirement.name}}</view>
-              <view class="c_title"> {{requirement.title}}</view>
+              <view class="c_name">{{requirement.requirement_manname}}</view>
+              <view class="c_title"> {{requirement.requirement_content}}</view>
               <view class="c_state"> 
                 <view class="font_state">状态</view> 
-                {{requirement.state}}
+                {{requirement.requirement_content}}
               </view>
           </navigator>
           </view>

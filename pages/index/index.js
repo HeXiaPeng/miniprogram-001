@@ -13,8 +13,11 @@ Page({
     requirementList: [],
     caseList: [],
   },
-  // 初始化
+
   init(){
+    // 云数据初始化
+    wx.cloud.init()
+
     // TODO: 轮播图需要写活
     const swiperList = [
       {
@@ -24,20 +27,6 @@ Page({
       {
         'id': 2,
         'swiperPic':'2.jpg'
-      }
-    ]
-    const requirementList = [
-      {
-        'id': 1,
-        'name': '用户姓名-title',
-        'title': '设计开发一个淘宝商城',
-        'state': '未开发'
-      },
-      {
-        'id': 2,
-        'name': 'nam用户姓名-titlee2',
-        'title': '设计一个订单系统',
-        'state': '已完成'
       }
     ]
     const caseList = [
@@ -54,8 +43,17 @@ Page({
     ]
     this.setData({
       swiperList,
-      requirementList,
       caseList
+    })
+    let that = this
+    const db = wx.cloud.database()
+    db.collection('requirement').get({
+      success: function(res) {
+        // res.data 是包含以上定义的两条记录的数组
+        that.setData({
+          requirementList: res.data
+        })
+      }
     })
   },
 
