@@ -1,2 +1,28 @@
 <!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<view class="user_info">
+  <!-- 用户背景信息 -->
+  <view class="user_info_bg">
+    <view class="user_info_wrap">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+
+  <view class="user_menu">
+    <view class="app_info_wrap">
+      <navigator url="/pages/myRequirement/index" class="app_info_item app_info_contact">
+        <text>我的需求</text>
+        <text></text>
+      </navigator>
+      <navigator url="/pages/aboutUs/index" class="app_info_item">
+        <button class="feedback">平台须知</button>
+      </navigator>
+      <navigator url="/pages/contactUs/index" class="app_info_item">
+        联系我们
+      </navigator>
+      <navigator url="/pages/userInfo/index" class="app_info_item">
+        我的设置
+      </navigator>
+    </view>
+  </view>
+</view>
