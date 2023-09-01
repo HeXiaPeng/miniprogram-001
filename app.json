@@ -2,7 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/publishRequirement/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/myRequirement/index",
+    "pages/aboutUs/index",
+    "pages/contactUs/index",
+    "pages/userInfo/index",
+    "pages/reqirementDetails/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
