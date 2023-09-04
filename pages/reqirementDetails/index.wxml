@@ -1,0 +1,44 @@
+<!--pages/publishRequirement/index.wxml-->
+<view class="page">
+  <view class="req_title">需求</view>
+
+
+    <view class="form">
+      <form>
+        <view class="row">
+          <view class="desc">需求来源</view>
+          <input class="input" value="{{data.requirement_source}}" disabled="true"></input>
+        </view>
+        
+        <view class="row">
+          <view class="desc">需求类型</view>
+          <input class="input" value="{{data.requirement_type}}" disabled="true"></input>
+        </view>
+
+        <textarea class="req_text" value="{{data.requirement_content}}" disabled="true"></textarea>
+
+        <view class="row">
+          <view class="desc">公司</view>
+          <input class="input" value="{{data.requirement_company}}" disabled="true"/>
+        </view>
+        <view class="row">
+          <view class="desc">电话</view>
+          <input class="input" value="{{data.requirement_phone}}" disabled="true"/>
+        </view>
+        <view class="row">
+          <view class="desc">联系人</view>
+          <input class="input" value="{{data.requirement_manname}}" disabled="true"/>
+        </view>
+        <view class="row">
+          <view class="desc">预算</view>
+          <input class="input" value="{{data.requirement_budget}}" disabled="true"/>
+        </view>
+        <view class="row">
+          <view class="desc">周期(周)</view>
+          <input class="input" value="{{data.requirement_time_limitation}}" disabled="true"/>
+        </view>
+        <button style="margin: 30rpx 0; width: 100%;" type="primary">接单？</button>
+      </form>
+    </view>
+
+</view>

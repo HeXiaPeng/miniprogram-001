@@ -1,0 +1,21 @@
+.req_title {
+  height: 200rpx;
+  font-size: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1rpx black solid;
+}
+.form {
+  margin: 20rpx 80rpx;
+}
+.form .row {
+  display: flex;
+  height: 80rpx;
+}
+.form .row .desc {
+  flex: 1;
+}
+.form .row .input {
+  flex: 3;
+}
