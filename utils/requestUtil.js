@@ -107,7 +107,6 @@ export const requestUtil=(params)=>{
          if(ajaxTimes==0){
           wx.hideLoading();  // 关闭加载图标
          }
-       
        }
     })
   });

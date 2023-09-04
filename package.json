@@ -1,12 +1,13 @@
 {
   "name": "miniprogram-001",
   "version": "1.0.0",
-  "description": "这是一个测试 这是另外一个测试",
+  "description": "订单小程序",
   "miniprogram": "dist",
   "devDependencies": {},
   "dependencies": {
     "@miniprogram-component-plus/tabs": "^1.0.0",
-    "miniprogram-sm-crypto": "^0.3.12"
+    "miniprogram-sm-crypto": "^0.3.12",
+    "moment": "^2.29.4"
   },
   "main": ".eslintrc.js",
   "directories": {
